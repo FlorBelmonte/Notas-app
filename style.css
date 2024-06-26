@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.nota-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#ingresarNota {
+    width: 100%;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+#btnCrear {
+    width: 100%;
+    /* Asegura que el botón tenga el mismo ancho que el textarea */
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btnCrear:hover {
+    background-color: #555;
+}
+
+/* Estilos para los elementos de las notas */
+#tblNotas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Asegura que el contenedor ocupe el ancho completo */
+}
+
+.nota-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    /* Limita el ancho máximo */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.nota-item textarea {
+    width: 100%;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    overflow-wrap: break-word;
+}
+
+.nota-item button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nota-item button:hover {
+    background-color: gray;
+}
+
+/* Media Queries para Responsiveness */
+@media (max-width: 600px) {
+
+    .nota-form,
+    .nota-item {
+        max-width: 90%;
+        /* Ajuste del ancho en pantallas más pequeñas */
+    }
+}
+
+@media (min-width: 601px) {
+
+    .nota-form,
+    .nota-item {
+        max-width: 300px;
+        /* Ajuste del ancho en pantallas más grandes */
+    }
+}
