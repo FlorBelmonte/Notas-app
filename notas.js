@@ -13,7 +13,7 @@ const crear = () => {
     guardarNotas();
     mostrarNotas();
 
-     document.getElementById('ingresarNota').value = '';
+     document.getElementById('ingresarNota').value = ''; 
 }
 
 const eliminarNota = (index) => {
@@ -31,10 +31,10 @@ const mostrarNotas = () => {
     let tabla = '';
 
     for (let i = 0; i < notas.length; i++) {
-        let r = notas[i];
+        let nota = notas[i];
         tabla +=
           `<div class="nota-item">
-             <textarea readonly>${r.ingresarNota}</textarea>
+             <textarea readonly>${nota.ingresarNota}</textarea>
              <button onclick="eliminarNota(${i})">Borrar</button>
           </div>`;
     }
