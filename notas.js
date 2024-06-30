@@ -31,10 +31,10 @@ const mostrarNotas = () => {
     let tabla = '';
 
     for (let i = 0; i < notas.length; i++) {
-        let nota = notas[i];
+        let notaActual = notas[i];
         tabla +=
           `<div class="nota-item">
-             <textarea readonly>${nota.ingresarNota}</textarea>
+             <textarea readonly>${notaActual.ingresarNota}</textarea>
              <button onclick="eliminarNota(${i})">Borrar</button>
           </div>`;
     }
